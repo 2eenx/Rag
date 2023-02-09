@@ -6,9 +6,12 @@ public class Interactable : MonoBehaviour
 {
 
     public UnityEngine.AI.NavMeshAgent playerAgent;
+    private bool hasInteracted;
 
     public virtual void MoveToInteraction(UnityEngine.AI.NavMeshAgent playerAgent)
     {
+
+        hasInteracted = false;
 
         this.playerAgent = playerAgent;
 
@@ -24,13 +27,15 @@ public class Interactable : MonoBehaviour
     void Update()
     {
 
-        if (playerAgent != null && !playerAgent.pathPending)
+        if (!hasInteracted && playerAgent != null && !playerAgent.pathPending)
         {
 
             if (playerAgent.remainingDistance <= playerAgent.stoppingDistance)
             {
 
                 Interact();
+
+                hasInteracted = true;
 
             }
 
