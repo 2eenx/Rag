@@ -17,11 +17,26 @@ public class Interactable : MonoBehaviour
         playerAgent.destination = this.transform.position;
 
 
-        Interact();
+      
 
     }
 
+    void Update()
+    {
 
+        if (playerAgent != null && !playerAgent.pathPending)
+        {
+
+            if (playerAgent.remainingDistance <= playerAgent.stoppingDistance)
+            {
+
+                Interact();
+
+            }
+
+        }
+
+    }
 
     public virtual void Interact()
     {
