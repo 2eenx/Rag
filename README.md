@@ -12,4 +12,6 @@ v2 interactable's put in place, so far there are three but it is modular and ver
 
    also made it so the player does not run exactly to the interacted object but rather a litle bit in front.
 
-   
+   also added UI for dialogue but was just messing with it and it does not function
+
+   finally there is no visual queue for when you are interacting but if you check the console the correct interactions are sent.
