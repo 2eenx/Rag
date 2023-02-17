@@ -15,3 +15,9 @@ v2 interactable's put in place, so far there are three but it is modular and ver
    also added UI for dialogue but was just messing with it and it does not function
 
    finally there is no visual queue for when you are interacting but if you check the console the correct interactions are sent.
+   
+   v3 created framework for singleton design pattern
+   
+   did so by creating head script and 3 following scripts allowing for the intake of a name which changes the player name displayed on screen however I have no use for this YET as I have no dialogue because there is no NPC to talk to yet. However this will make it super easy for when an NPC is talking to a player that it will say the players inputted name as each player will give its player a different name. 
+   
+   Also added ambient sound to the forest setting
